@@ -1,6 +1,7 @@
 import pandas as pd
 import math
 
+
 care_areas = pd.read_csv(r"C:\Users\skava\Desktop\Github\Unhack-2024\resources\Dataset-0(1)\Dataset-0\1st\CareAreas.csv", header=None)
 metadata = pd.read_csv(r"C:\Users\skava\Desktop\Github\Unhack-2024\resources\Dataset-0(1)\Dataset-0\1st\metadata.csv")
 
@@ -24,8 +25,6 @@ def main_field_calculation(main_field_size, care_areas):
 
     df = pd.DataFrame(main_field)
     df.to_csv("mainfield.csv",header=False)
-
-
 
 
 def sub_field_calculation(sub_field_size, care_areas):
@@ -56,22 +55,12 @@ def sub_field_calculation(sub_field_size, care_areas):
                     sub_field.append([sub_field_x1, sub_field_x2, sub_field_y1, sub_field_y2,index])
                     # subid = subid+1
 
-
     df = pd.DataFrame(sub_field)
 
     df.to_csv("subfield.csv",header=False)
 
 
-
-
-
-        # print("sub_field_x1 : ",sub_field_x1,"sub_field_y1 : ",sub_field_y1,"sub_field_x2 : ",sub_field_x2,"sub_field_y2 : ",sub_field_y2,"Mainfield id: ",index)
-
-    
-
-
-# main_field_calculation(main_field_size, care_areas)
-
+main_field_calculation(main_field_size, care_areas)
 
 main_field_area = pd.read_csv(r"C:\Users\skava\Desktop\Github\Unhack-2024\resources\Dataset-0(1)\Dataset-0\1st\mainfield.csv",header=None)
 
