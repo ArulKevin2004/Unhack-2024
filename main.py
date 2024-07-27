@@ -62,8 +62,6 @@ def sub_field_calculation(sub_field_size, care_areas):
 
 main_field_calculation(main_field_size, care_areas)
 
-main_field_area = pd.read_csv(r"C:\Users\skava\Desktop\Github\Unhack-2024\resources\Dataset-0(1)\Dataset-0\1st\mainfield.csv",header=None)
-
 sub_field_calculation(sub_field_size, care_areas)
 
 
